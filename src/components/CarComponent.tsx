@@ -1,4 +1,3 @@
-import * as React from "react";
 import Moveable from "react-moveable";
 import { Car } from "../App";
 
@@ -51,11 +50,11 @@ export default function CarComponent(props: CarProps) {
         onRender={(e) => {
           e.target.style.cssText += e.cssText;
         }}
-        onDragStart={({ target, clientX, clientY }) => {
-          // console.log("onDragStart", target, clientX, clientY);
+        onDragStart={(dragEvent) => {
+          console.log("onDragStart", dragEvent);
         }}
-        onRotate={(x) => {
-          console.log("onRotate", x);
+        onRotate={(rotateEvent) => {
+          console.log("onRotate", rotateEvent);
         }}
       />
     </>

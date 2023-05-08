@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Moveable from "react-moveable";
+// import Moveable from "react-moveable";
 import CarComponent from "./components/CarComponent";
 
 export interface Car {
@@ -18,8 +18,8 @@ const initialCrossRoad = {
 };
 
 export default function App() {
-  const [crossRoads, setCrossRoads] = useState([initialCrossRoad]);
-  const [index, setIndex] = useState(0);
+  const [crossRoads] = useState([initialCrossRoad]);
+  const [index] = useState(0);
 
   const crossRoad = crossRoads[index];
 
